@@ -14,8 +14,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_select 'div#<CSS id for error explanation>'
     assert_select 'div.<CSS class for field with error>'
   end
-<<<<<<< HEAD
-=======
+
 
 
   test "valid signup information" do
@@ -28,7 +27,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
     follow_redirect!
     assert_template 'users/show'
-    assert_not flash.message
+    assert is_logged_in?
   end
->>>>>>> 11c5e9e3958d37872d356958e5419cf6b34f77e4
+
 end
